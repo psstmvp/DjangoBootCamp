@@ -38,7 +38,7 @@
 
         <br>
 
-        <!-- <table border="1" cellpadding="10" align="center">
+        <table border="1" cellpadding="10" align="center">
             <tr>
                 <td>SNO</td>
                 <td>Admin Name</td>
@@ -47,15 +47,17 @@
                 <td>Admin Password</td>
                 <td>Action</td>
             </tr>
+            {% for i in admindata %}
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{forloop.counter}}</td>
+                <td>{{i.admin_name}}</td>
+                <td>{{i.admin_email}}</td>
+                <td>{{i.admin_contact}}</td>
+                <td>{{i.admin_password}}</td>
                 <td></td>
             </tr>
-        </table> -->
+            {% endfor %}
+        </table>
     </form>
 </body>
 
