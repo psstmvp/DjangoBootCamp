@@ -2,7 +2,7 @@
 from django.urls import path , include
 from Administrator import views
 
-app_name="Admin"
+app_name="Administrator"
 
 urlpatterns = [
     path('AdminRegistration/',views.AdminRegistration,name="AdminRegistration"),

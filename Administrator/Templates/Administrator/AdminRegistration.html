@@ -54,7 +54,9 @@
                 <td>{{i.admin_email}}</td>
                 <td>{{i.admin_contact}}</td>
                 <td>{{i.admin_password}}</td>
-                <td></td>
+                <td>
+                    <a href="{% url 'Administrator:DeleteAdmin' i.id %}">Delete</a>
+                </td>
             </tr>
             {% endfor %}
         </table>

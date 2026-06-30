@@ -21,4 +21,4 @@ def AdminRegistration(request):
 
 def DeleteAdmin(request,did):
     tbl_admin.objects.get(id=did).delete()
-    return redirect('Admin:AdminRegistration')
+    return redirect('Administrator:AdminRegistration')
