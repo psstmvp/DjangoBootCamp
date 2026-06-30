@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 from Administrator.models import *
 # Create your views here.
@@ -19,3 +19,6 @@ def AdminRegistration(request):
     else:
         return render(request,'Administrator/AdminRegistration.html',{'admindata':admindata})
 
+def DeleteAdmin(request,did):
+    tbl_admin.objects.get(id=did).delete()
+    return redirect('Admin:AdminRegistration')
